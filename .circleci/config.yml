@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Generate pdf
           command: |
-            pdflatex main
+            pdflatex --output-directory=./out/ main
       - run:
           name: Send file
           command: /app/artisan pdf:send /thesis/out/main.pdf

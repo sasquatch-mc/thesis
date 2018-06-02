@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: yoangrigorov/thesis-builder:latest
+    working_directory: /thesis
+    steps:
+      - checkout
+      - run:
+          name: Generate pdf
+          command: |
+            pdflatex main
+      - run:
+          name: Send file
+          command: /app/artisan pdf:send /thesis/out/main.pdf

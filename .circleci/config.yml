@@ -9,6 +9,7 @@ jobs:
       - run:
           name: Generate pdf
           command: |
+            mkdir out
             pdflatex --output-directory=./out/ main
       - run:
           name: Send file

@@ -139,6 +139,7 @@
 \usepackage{rotating}
 \usepackage{listings}
 \usepackage{lstpatch}
+\usepackage{multirow}
 \lstset{captionpos=b,
         frame=tb,
         basicstyle=\scriptsize\ttfamily,
@@ -181,15 +182,15 @@
 %	defined as \examname above so you cite it as \examname
 %----------------------------------------------------------------------------------------
 
-\thesistitle{Thesis Title} % Your thesis title - this is used in the title and abstract
+\thesistitle{Glagol DSL} % Your thesis title - this is used in the title and abstract
 %-------------------------------------------------  
-\supervisor{Dr. James \textsc{Smith}} % You supervisor's name - this is used in the title page
+\supervisor{Dr. Vadim \textsc{Zaytsev}} % You supervisor's name - this is used in the title page
 %-------------------------------------------------   
 \examiner{} % Your examiner's name - this is not currently used anywhere in the template, cite it with \examname if you want it
 %-------------------------------------------------   
 \degree{MSc.} % Your degree name - this is currently used in the title page and abstract
 %-------------------------------------------------   
-\authors{John \textsc{Smith}} % Your name - this is used in the title page and abstract
+\authors{Yoan-Alexander \textsc{Grigorov}} % Your name - this is used in the title page and abstract
 %-------------------------------------------------   
 \addresses{} % Your address - this is not currently used anywhere in the template, cite it with \addressnames if you want it
 %-------------------------------------------------   
@@ -197,25 +198,21 @@
 %-------------------------------------------------   
 \keywords{} % Keywords for your thesis - this is not currently used anywhere in the template, cite it with \keywordnames if you want it
 %-------------------------------------------------   
-\university{\texorpdfstring{\href{http://www.hw.ac.uk} % Your university's URL
-                {Heriot-Watt University}} % Your university's name - this is currently used in the title page
-                {Heriot-Watt University}}
+\university{\texorpdfstring{\href{http://www.uva.nl} % Your university's URL
+                {Universiteit van Amsterdam}} % Your university's name - this is currently used in the title page
+                {Universiteit van Amsterdam}}
 %-------------------------------------------------   
-\UNIVERSITY{\texorpdfstring{\href{http://www.hw.ac.uk)} % Your university's URL
-                {HERIOT_WATT UNIVERSITY}} % Your university's name in capitals - this is currently used in the abstract page
-                {UNIVERSITY NAME (IN BLOCK CAPITALS)}}
+\UNIVERSITY{\texorpdfstring{\href{http://www.uva.nl)} % Your university's URL
+                {UNIVERSITEIT VAN AMSTERDAM}} % Your university's name in capitals - this is currently used in the abstract page
+                {UNIVERSITEIT VAN AMSTERDAM}}
 %-------------------------------------------------                
-\department{\texorpdfstring{\href{http://www.macs.hw.ac.uk} % Your department's URL
-                {School of Mathematical and Computer Sciences}} % Your department's name - used in the title page and abstract
-                {School of Mathematical and Computer Sciences}}
+\department{\texorpdfstring{\href{http://www.software-engineering-amsterdam.nl} % Your department's URL
+                {Faculteit der Natuurwetenschappen, Wiskunde en Informatica}} % Your department's name - used in the title page and abstract
+                {Faculteit der Natuurwetenschappen, Wiskunde en Informatica}}
 %-------------------------------------------------                
-\DEPARTMENT{\texorpdfstring{\href{http://www.macs.hw.ac.uk} % Your department's URL
-                {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
-                {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}}
-%-------------------------------------------------                
-\group{\texorpdfstring{\href{Research Group Web Site URL Here (include http://)} % Your research group's URL
-                {Research Group Name}} % Your research group's name - this is currently used in the title page 
-                {Research Group Name}}
+\DEPARTMENT{\texorpdfstring{\href{http://www.software-engineering-amsterdam.nl} % Your department's URL
+                {FACULTEIT DER NATUURWETENSCHAPPEN, WISKUNDE EN INFORMATICA}} % Your department's name in capitals - this is not currently used anywhere in the template, cite it with \DEPTNAME if you want it
+                {FACULTEIT DER NATUURWETENSCHAPPEN, WISKUNDE EN INFORMATICA}}
 %-------------------------------------------------                
 \GROUP{\texorpdfstring{\href{Research Group Web Site URL Here (include http://)} % Your research group's URL
                 {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}} % Your research group's name in capitals - this is not currently used anywhere in the template, cite it with \GROUPNAME if you want it
@@ -230,6 +227,20 @@
                 {FACULTY NAME (IN BLOCK CAPITALS)}}
 %----------------------------------------------------------------------------------------    
 
+% University logo and information %
+\newcommand{\uvacoverfoot}{%
+  \begin{center}
+  \begin{tabular}{r|l}
+    \multirow{3}{*}{\includegraphics[height=48pt]{uva.pdf}}
+    &\textsc{\Large Universiteit van Amsterdam}\\
+	&\textsc{Faculteit der Natuurwetenschappen, Wiskunde en Informatica}\\
+	&\textsc{Master Software Engineering}\\
+	&\url{http://www.software-engineering-amsterdam.nl}
+		% Supervisor: Prof Dr P. Klint
+  \end{tabular}
+  \end{center}
+}
+  
 % The default title page, this is not used in this www.latextemplates.com version            
 \renewcommand\maketitle{
   \btypeout{Title Page}
@@ -255,6 +266,7 @@
       \smallskip
       {\LARGE \authornames \par}
       \vfill
+      {\uvacoverfoot}
       {\large A thesis submitted in partial fulfillment for the \par}
       {\large degree of \degreename \par}
       \bigskip

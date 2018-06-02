@@ -1,31 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Oliver Lemon made minor edits (jan 2015)  to : 
-% Masters/Doctoral Thesis 
-% LaTeX Template
-% Version 1.43 (17/5/14)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original authors:
-% Steven Gunn 
-% http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/
-% and
-% Sunil Patel
-% http://www.sunilpatel.co.uk/thesis-template/
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Note:
-% Make sure to edit document variables in the Thesis.cls file
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
 \documentclass[11pt, oneside]{Thesis} % The default font size and one-sided printing (no margin offsets)
 
 \graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
@@ -34,8 +6,7 @@
 \hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
 
 
-\title{HWU CS Masters thesis template} % BUT you should use use " \title{\ttitle} " here instead to define the thesis title ! 
-% \ttitle is defined in the file Thesis.cls 
+\title{\ttitle} % \ttitle is defined in the file Thesis.cls 
 
 \begin{document}
 
@@ -65,36 +36,33 @@
 \begin{titlepage}
 \begin{center}
 
-\textsc{\LARGE \univname}\\[1.5cm] % University name
 \textsc{\Large Masters Thesis}\\[0.5cm] % Thesis type
 
 \HRule \\[0.4cm] % Horizontal line
 {\huge \bfseries \ttitle}\\[0.4cm] % Thesis title
 \HRule \\[1.5cm] % Horizontal line
- 
+
+\vfill
+
 \begin{minipage}{0.4\textwidth}
 \begin{flushleft} \large
 \emph{Author:}\\
-\href{http://www.johnsmith.com}{\authornames} % Author name - remove the \href bracket to remove the link
+{\authornames} % Author name - remove the \href bracket to remove the link
 \end{flushleft}
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{Supervisor:} \\
-\href{http://www.jamessmith.com}{\supname} % Supervisor name - remove the \href bracket to remove the link  
+\href{http://grammarware.net/}{\supname} % Supervisor name - remove the \href bracket to remove the link  
 \end{flushright}
 \end{minipage}\\[3cm]
- 
-\large \textit{A thesis submitted in fulfilment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
-\textit{in the}\\[0.4cm]
-%\groupname\\
 
-\deptname\\[2cm] % Research group name and department name
- 
-{\large \today}\\[1cm] % Date
-\includegraphics[width=6cm]{./Figures/HWUlogo.jpg} % University/department logo - uncomment to place it
- 
 \vfill
+
+\uvacoverfoot
+
+{\large \today}\\[1cm] % Date
+
 \end{center}
 
 \end{titlepage}
